@@ -1,0 +1,44 @@
+# 01_lucky_unicorn
+import random
+
+
+start = input('press enter to start')
+
+
+print('Weclome to the unicorn gambling')
+
+
+# token amount with gamble
+token = int(input('how many tokens do you want to gamble?'))
+if token <= 10:
+    print(f'you want to gamble this amount of {token} ?')
+    y = input('') 
+    if y == 'y' or y == 'yes' :
+        print('ok time to gamble!')
+    else:
+        print(f'you dont want to gamble this much {token}? How much now?')
+
+# random animal and maths
+token -=1
+total_amount = token
+items = ["zebra", "horse", "unicorn"]
+item = random.choice(items)
+print(f'{item}')
+
+zebra = 0.50
+horse = 0.50
+unicorn = 5
+amount_won = input('')
+if 'animal' == ['zebra'] or ['horse'] :
+    print(f'you got 0.50 tokens')
+    amount_won +0.50 
+else:
+    if 'animal' == ['unicorn'] :
+        print('you got 5 tokens')
+        amount_won +5
+
+total_amount = token + amount_won
+
+#total amount
+
+print(f'{total_amount}')
