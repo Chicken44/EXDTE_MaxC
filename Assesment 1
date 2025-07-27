@@ -1,0 +1,18 @@
+import board
+import digitalio
+import time
+led = digitalio.DigitalInOut(board.GP15)
+led.direction = digitalio.Direction.OUTPUT
+
+button1 = digitalio.DigitalInOut(board.GP14)
+button1.direction = digitalio.Direction.INPUT
+button1.pull = digitalio.Pull.UP
+
+while True:
+    if button1.value is True:
+        led.value = False
+    else:
+        led.value = True
+if button1.value is False:
+    time = Random.uniform(5, 10)
+    led.value = True
